@@ -1,3 +1,6 @@
 class FizzBuzz:
   def generate(self):
-     return range(1, 101)
+     fb = range(1, 101)
+     for i in range(2,101,3):
+         fb[i] = 'Fizz'
+     return fb
