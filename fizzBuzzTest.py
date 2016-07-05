@@ -22,7 +22,15 @@ class FizzBuzzTest(unittest.TestCase):
         fb = self.fizzBuzz.generate()
 
         for i in range(4,101,5):
-            self.assertEqual('Buzz', fb[i])
+            if (i+1) % 3 != 0:
+                self.assertEqual('Buzz', fb[i])
+
+    def test_multiples_of_three_and_five_print_fizzbuzz(self):
+        fb = self.fizzBuzz.generate()
+
+        for i in range(4,101,5):
+            if (i+1) % 3 == 0:
+                self.assertEqual('FizzBuzz', fb[i])
 
 if __name__ == '__main__':
     unittest.main()

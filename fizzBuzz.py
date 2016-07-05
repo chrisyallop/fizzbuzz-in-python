@@ -5,6 +5,9 @@ class FizzBuzz:
          fb[i] = 'Fizz'
 
      for i in range(4,101,5):
-         fb[i] = 'Buzz'
+         if (i+1) % 3 == 0:
+             fb[i] = 'FizzBuzz'
+         else:
+             fb[i] = 'Buzz'
 
      return fb
